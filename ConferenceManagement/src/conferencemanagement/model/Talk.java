@@ -10,24 +10,19 @@ public class Talk {
     }
     String talkName;
     String talkDuration;
-    Date talkScheduledTime;
+    String talkTime;
 
-    public void setTalkScheduledTime(Date talkScheduledTime) {
-        this.talkScheduledTime = talkScheduledTime;
+    public void setTalkTime(String talkTime) {
+        this.talkTime = talkTime;
     }
 
-    public Date getTalkScheduledTime() {
-        return talkScheduledTime;
+    public String getTalkTime() {
+        return talkTime;
     }
 
     public Talk(String talkName, String talkDuration) {
         this.talkName = talkName;
         this.talkDuration = talkDuration;
-    }
-    public Talk(String talkName, String talkDuration, Date talkScheduledTime) {
-        this.talkName = talkName;
-        this.talkDuration = talkDuration;
-        this.talkScheduledTime = talkScheduledTime;
     }
 
     public void setTalkName(String talkName) {
@@ -45,7 +40,10 @@ public class Talk {
     public String getTalkDuration() {
         return talkDuration;
     }
+//    public String toString() {
+//        return "Talk scheduled time: " + DateUtil.getTime(talkScheduledTime) + "Talk name: " + talkName + "\n" + "Talk duration: " + talkDuration;    
+//    }
     public String toString() {
-        return "Talk scheduled time: " + DateUtil.getTime(talkScheduledTime) + "Talk name: " + talkName + "\n" + "Talk duration: " + talkDuration;    
+        return this.getTalkTime() + ": " + talkName + "\n";    
     }
 }
