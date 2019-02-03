@@ -64,7 +64,7 @@ public class Session {
     }
     
     public boolean canHaveMoreTalks(String duration) {
-        boolean moreTalks = (remainingTime > Integer.parseInt(duration)) ? true : false;
+        boolean moreTalks = (remainingTime >= Integer.parseInt(duration)) ? true : false;
         return moreTalks;
     }
 
